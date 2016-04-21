@@ -4,6 +4,10 @@
                                  scad-mode
                                  ag
                                  ggtags
+                                 p4
+                                 projectile-rails
+                                 rvm
+                                 bundler
                                  ) prelude-packages))
 
 ;; Install my packages

@@ -8,7 +8,7 @@
 (setq auto-window-vscroll nil)
 
 ;; default to a pretty font
-(set-default-font "DejaVu Sans Mono-8")
+;;; This is now set in .Xdefaults, see http://batsov.com/articles/2011/06/05/emacs-default-font/
 
 ;; turn on line numbers on the side of the window
 (require 'linum)
@@ -30,6 +30,14 @@
 
 ;; Prelude's default save on click is really annoying
 (remove-hook 'mouse-leave-buffer-hook 'prelude-auto-save-command)
+
+;; change line length highlighting to 120 characters
+(setq whitespace-line-column 120)
+
+;; Turn on perforce mode by default, and set it to check for unmodified files before submit
+(require 'p4)
+(setq p4-check-empty-diffs t)
+(p4-set-p4-config '.p4config)
 
 (provide '10-local-settings)
 ;;; 10-local-settings ends here
