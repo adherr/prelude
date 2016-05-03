@@ -8,6 +8,7 @@
                                  projectile-rails
                                  rvm
                                  bundler
+                                 aggressive-indent
                                  ) prelude-packages))
 
 ;; Install my packages

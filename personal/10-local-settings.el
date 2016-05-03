@@ -37,7 +37,13 @@
 ;; Turn on perforce mode by default, and set it to check for unmodified files before submit
 (require 'p4)
 (setq p4-check-empty-diffs t)
-(p4-set-p4-config '.p4config)
+(p4-set-p4-config ".p4config")
+
+;; Set svn username and password in projectile because it can't find my .subversion directory in daemon mode
+(setq projectile-svn-command "svn list --username andrewh --password password -R . | grep -v '$/' | tr '\\n' '\\0'")
+
+;; turn on aggressive indent
+(global-aggressive-indent-mode 1)
 
 (provide '10-local-settings)
 ;;; 10-local-settings ends here
