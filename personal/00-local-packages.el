@@ -6,9 +6,12 @@
                                  ggtags
                                  p4
                                  projectile-rails
+                                 rubocop
                                  rvm
                                  bundler
+                                 rspec-mode
                                  aggressive-indent
+                                 yasnippet
                                  ) prelude-packages))
 
 ;; Install my packages

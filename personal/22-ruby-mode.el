@@ -11,3 +11,6 @@
 
 ;; add bundler support
 (require 'bundler)
+
+;; add rubocop mode
+(add-hook 'ruby-mode-hook #'rubocop-mode)
