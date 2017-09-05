@@ -1,11 +1,12 @@
 ;; My packages
 (setq prelude-packages (append '(
                                  feature-mode
-                                 scad-mode
                                  ag
                                  ggtags
                                  p4
                                  projectile-rails
+                                 scad-mode
+                                 rainbow-identifiers
                                  rubocop
                                  rvm
                                  bundler

@@ -39,11 +39,10 @@
 (setq p4-check-empty-diffs t)
 (p4-set-p4-config ".p4config")
 
-;; Set svn username and password in projectile because it can't find my .subversion directory in daemon mode
-(setq projectile-svn-command "svn list --username andrewh --password password -R . | grep -v '$/' | tr '\\n' '\\0'")
-
-;; turn on aggressive indent
-(global-aggressive-indent-mode 1)
+;; Avy is cool. Use it more
+(global-set-key (kbd "M-g g") 'avy-goto-line)
+;; ace-window use home row
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 
 (provide '10-local-settings)
 ;;; 10-local-settings ends here
