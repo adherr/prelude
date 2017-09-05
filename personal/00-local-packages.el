@@ -1,17 +1,17 @@
 ;; My packages
 (setq prelude-packages (append '(
-                                 feature-mode
                                  ag
+                                 aggressive-indent
+                                 bundler
+                                 feature-mode
                                  ggtags
                                  p4
                                  projectile-rails
-                                 scad-mode
                                  rainbow-identifiers
+                                 rspec-mode
                                  rubocop
                                  rvm
-                                 bundler
-                                 rspec-mode
-                                 aggressive-indent
+                                 scad-mode
                                  yasnippet
                                  ) prelude-packages))
 
