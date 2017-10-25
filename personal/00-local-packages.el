@@ -5,6 +5,7 @@
                                  bundler
                                  feature-mode
                                  ggtags
+                                 groovy-mode
                                  p4
                                  projectile-rails
                                  rainbow-identifiers

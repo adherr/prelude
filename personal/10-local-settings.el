@@ -14,6 +14,9 @@
 (require 'linum)
 (global-linum-mode 1)
 
+;; save my desktop configuration so when my computer dies I can start from where I left off
+(desktop-save-mode 1)
+
 ;; Don't use messages that you don't read
 (setq initial-scratch-message "")
 
@@ -30,14 +33,6 @@
 
 ;; Prelude's default save on click is really annoying
 (remove-hook 'mouse-leave-buffer-hook 'prelude-auto-save-command)
-
-;; change line length highlighting to 120 characters
-(setq whitespace-line-column 120)
-
-;; Turn on perforce mode by default, and set it to check for unmodified files before submit
-(require 'p4)
-(setq p4-check-empty-diffs t)
-(p4-set-p4-config ".p4config")
 
 ;; Avy is cool. Use it more
 (global-set-key (kbd "M-g g") 'avy-goto-line)
