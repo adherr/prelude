@@ -38,6 +38,10 @@
 (global-set-key (kbd "M-g g") 'avy-goto-line)
 ;; ace-window use home row
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+(advise-commands "auto-save"
+                 (ace-window)
+                 before
+                 (prelude-auto-save-command))
 
 (provide '10-local-settings)
 ;;; 10-local-settings ends here
