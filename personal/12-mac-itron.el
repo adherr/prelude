@@ -6,7 +6,7 @@
 
   (setq prelude-clean-whitespace-on-save nil) ;; don't clean up code here
   (global-aggressive-indent-mode 0) ;; off at Itron so I don't reformat all the things
-  
+
   ;; all the lines are too long, switch to fill column indicator
   (setq whitespace-style '(face tabs empty trailing))
   ;; (setq fci-rule-width 1)
