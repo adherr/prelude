@@ -32,7 +32,7 @@
               (local-set-key (kbd "C-x k") 'server-edit))))
 
 ;; Prelude's default save on click is really annoying
-(remove-hook 'mouse-leave-buffer-hook 'prelude-auto-save-command)
+;(remove-hook 'mouse-leave-buffer-hook 'prelude-auto-save-command)
 
 ;; Avy is cool. Use it more
 (global-set-key (kbd "M-g g") 'avy-goto-line)
@@ -43,5 +43,5 @@
                  before
                  (prelude-auto-save-command))
 
-(provide '10-local-settings)
-;;; 10-local-settings ends here
+(provide '01-local-settings)
+;;; 01-local-settings ends here

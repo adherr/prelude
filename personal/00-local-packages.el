@@ -3,6 +3,7 @@
                             aggressive-indent
                             bundler
                             chruby
+                            counsel-projectile
                             feature-mode
                             ggtags
                             groovy-mode
@@ -13,4 +14,5 @@
                             rspec-mode
                             rubocop
                             scad-mode
+                            wgrep
                             yasnippet))

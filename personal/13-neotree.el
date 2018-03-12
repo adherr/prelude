@@ -1,5 +1,3 @@
-(setq projectile-switch-project-action 'neotree-projectile-action)
-
 (defun neotree-project-dir ()
   "Open NeoTree using the projectile root."
   (interactive)
