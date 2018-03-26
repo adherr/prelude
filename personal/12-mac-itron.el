@@ -14,6 +14,8 @@
   ;; (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
   ;; (global-fci-mode 1)
 
+  (setq pivotal-api-token "8b927b7495f94532289684f2a7916e3a")
+
   (load "server")
   (unless (server-running-p) (server-start))
   )

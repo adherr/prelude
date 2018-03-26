@@ -23,6 +23,11 @@
 ;; not sure if this is done elsewhere in prelude, so do it here to be sure
 (prefer-coding-system 'utf-8)
 
+;; Not all servers have zsh, but should have bash
+(setenv "SHELL" "/bin/bash")
+(setq-default explicit-shell-file-name "/bin/bash")
+(setq-default shell-file-name "/bin/bash")
+
 ;; make C-x k end client buffers, if there are any
 (add-hook 'server-switch-hook
           (lambda ()
