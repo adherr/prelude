@@ -1,14 +1,14 @@
 ;; My packages
 
-;; add org mode repo for org-plus-contrib
-(require 'package)
-(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
-(package-initialize)
 (prelude-require-packages '(ag
                             aggressive-indent
                             bundler
                             chruby
+                            counsel
                             counsel-projectile
+                            counsel-gtags
+                            counsel-tramp
+                            docker-tramp
                             feature-mode
                             ggtags
                             groovy-mode
@@ -16,7 +16,7 @@
                             ob-elixir
                             ob-http
                             ob-restclient
-                            org-plus-contrib
+                            org
                             p4
                             pivotal-tracker
                             projectile-rails
