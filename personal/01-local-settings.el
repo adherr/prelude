@@ -43,8 +43,9 @@
 (global-set-key (kbd "M-g g") 'avy-goto-line)
 ;; ace-window use home row
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+;; autosave any time we might leave a window
 (advise-commands "auto-save"
-                 (ace-window)
+                 (ace-window avy-goto-line avy-goto-word-or-subword-1 counsel-projectile-ag counsel-projectile-rg magit-status)
                  before
                  (prelude-auto-save-command))
 
