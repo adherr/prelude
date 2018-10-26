@@ -25,5 +25,6 @@
                             rspec-mode
                             rubocop
                             scad-mode
+                            smart-mode-line
                             wgrep
                             yasnippet))

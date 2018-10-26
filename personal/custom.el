@@ -9,6 +9,7 @@
  '(js-indent-level 2)
  '(magit-bury-buffer-function (quote magit-mode-quit-window))
  '(magit-display-buffer-function (quote magit-display-buffer-same-window-except-diff-v1))
+ '(magit-save-repository-buffers (quote dontask))
  '(neo-theme (quote arrow))
  '(neo-window-width 45)
  '(package-selected-packages

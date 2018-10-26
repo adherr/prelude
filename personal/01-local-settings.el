@@ -11,8 +11,7 @@
 ;;; This is now set in .Xdefaults, see http://batsov.com/articles/2011/06/05/emacs-default-font/
 
 ;; turn on line numbers on the side of the window
-(require 'linum)
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 
 ;; save my desktop configuration so when my computer dies I can start from where I left off
 (desktop-save-mode 1)
@@ -39,15 +38,33 @@
 ;; Prelude's default save on click is really annoying
 ;(remove-hook 'mouse-leave-buffer-hook 'prelude-auto-save-command)
 
-;; Avy is cool. Use it more
+;; avy goto line
 (global-set-key (kbd "M-g g") 'avy-goto-line)
 ;; ace-window use home row
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-;; autosave any time we might leave a window
-(advise-commands "auto-save"
-                 (ace-window avy-goto-line avy-goto-word-or-subword-1 counsel-projectile-ag counsel-projectile-rg magit-status)
-                 before
-                 (prelude-auto-save-command))
+
+;; use ace-window even when there are only two windows
+(setq aw-dispatch-always t)
+;; but leave other-window key binding alone
+(global-set-key [remap other-window] 'other-window)
+
+;; smart-mode-line (copied from
+;; 54110fa4345c634be0304d08814caa9bd9a1e7f1 in prelude, where it was
+;; removed)
+(require 'smart-mode-line)
+(setq sml/no-confirm-load-theme t)
+;; delegate theming to the currently active theme
+(setq sml/theme nil)
+(add-hook 'after-init-hook #'sml/setup)
+
+;; autosave now uses super-save
+(setq new-save-actions '(avy-goto-line
+                         avy-goto-word-or-subword-1
+                         counsel-projectile-find-file
+                         counsel-projectile-ag
+                         counsel-projectile-rg))
+(dolist (action new-save-actions)
+  (add-to-list 'super-save-triggers action))
 
 (provide '01-local-settings)
 ;;; 01-local-settings ends here
