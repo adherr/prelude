@@ -13,3 +13,4 @@
 
 (global-set-key [f8] 'neotree-toggle)
 (global-set-key [f9] 'neotree-project-dir)
+(setq-default neo-show-hidden-files t)
