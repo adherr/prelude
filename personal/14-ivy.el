@@ -4,6 +4,7 @@
 (global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
 ;; counsel-tramp on C-x t
 (global-set-key (kbd "C-x t") 'counsel-tramp)
+(global-set-key (kbd "M-y") 'counsel-yank-pop)
 
 ;; use ivy for magit
 (setq magit-completing-read-function 'ivy-completing-read)
