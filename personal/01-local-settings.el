@@ -5,7 +5,13 @@
 (global-display-line-numbers-mode 1)
 
 ;; save my desktop configuration so when my computer dies I can start from where I left off
-(desktop-save-mode 1)
+(custom-set-variables
+ '(desktop-base-file-name "desktop")
+ '(desktop-base-lock-name "desktop.lock")
+ '(desktop-path (add-to-list 'desktop-path prelude-savefile-dir))
+ '(desktop-dirname prelude-savefile-dir)
+ '(desktop-save-mode t))
+;nothing works wtf
 
 ;; Don't use messages that you don't read
 (setq initial-scratch-message "")
@@ -42,6 +48,9 @@
 (setq sml/no-confirm-load-theme t)
 ;; delegate theming to the currently active theme
 (setq sml/theme nil)
+;; directory abbreviations after projectile project name
+(setq sml/use-projectile-p 'before-prefixes)
+(add-to-list 'sml/replacer-regexp-list '("app/models" "a/m") t) ; not working, don't know why
 (add-hook 'after-init-hook #'sml/setup)
 
 ;; autosave now uses super-save
