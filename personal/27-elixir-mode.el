@@ -5,5 +5,5 @@
 ;; definition)
 
 (font-lock-remove-keywords 'elixir-mode
-'(("\\([A-Z_a-z]+[0-9A-Z_a-z]*[!?]?\\)[[:space:]]*=\\{1\\}\\(?:~[BCDNRSTbcrsw]\\|[A-Z_a-z]+[0-9A-Z_a-z]*[!?]?\\|[[:space:]]\\|
+                           '(("\\([A-Z_a-z][0-9A-Z_a-z]*[!?]?\\)[[:space:]]*=\\{1\\}\\(?:~[BCDNR-Ubcrsw]\\|[A-Z_a-z][0-9A-Z_a-z]*[!?]?\\|[[:space:]]\\|
 +\\)" . (1 font-lock-variable-name-face))))
