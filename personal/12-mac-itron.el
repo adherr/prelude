@@ -18,4 +18,13 @@
 
   (load "server")
   (unless (server-running-p) (server-start))
+
+  (defun insert-workitem-url ()
+    "find the text '^# On branch (\d+)' in the current buffer and inserts the correct workitem url at point"
+    (interactive)
+    (let ((current-position (point)))
+      (re-search-forward "^# On branch \\([[:digit:]]+\\)" nil nil 1)
+      (let ((story-number (match-string 1)))
+        (goto-char current-position)
+        (insert "https://dev.azure.com/itron/SoftwareProducts/_workitems/edit/" story-number))))
   )
