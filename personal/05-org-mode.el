@@ -3,5 +3,6 @@
  'org-babel-load-languages
  '((elixir . t)
    (org . t)
+   (plantuml . t)
    (ruby . t)
    (shell . t)))

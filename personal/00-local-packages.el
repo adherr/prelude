@@ -15,6 +15,7 @@
                             ess-R-data-view
                             ess-smart-equals
                             feature-mode
+                            flycheck-plantuml
                             git-link
                             ggtags
                             groovy-mode
@@ -26,6 +27,7 @@
                             org
                             ;; org-plus-contrib
                             p4
+                            plantuml-mode
                             poly-R
                             poly-erb
                             poly-org
@@ -37,6 +39,7 @@
                             rubocop
                             ruby-tools
                             scad-mode
+                            scad-preview
                             smart-mode-line
                             smex
                             toml-mode
