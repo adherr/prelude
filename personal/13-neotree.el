@@ -1,16 +1,7 @@
-(defun neotree-project-dir ()
-  "Open NeoTree using the projectile root."
+(defun treemacs-exclusive-show ()
   (interactive)
-  (let ((project-dir (projectile-project-root))
-        (file-name (buffer-file-name)))
-    (neotree-show)
-    (if project-dir
-        (if (neo-global--window-exists-p)
-            (progn
-              (neotree-dir project-dir)
-              (neotree-find file-name)))
-      (message "Could not find git project root."))))
+  (treemacs-display-current-project-exclusively)
+  (treemacs-select-window))
 
-(global-set-key [f8] 'neotree-toggle)
-(global-set-key [f9] 'neotree-project-dir)
-(setq-default neo-show-hidden-files t)
+(global-set-key [f8] 'treemacs)
+(global-set-key [f9] 'treemacs-exclusive-show)

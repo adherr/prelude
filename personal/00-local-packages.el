@@ -20,7 +20,6 @@
                             ggtags
                             groovy-mode
                             less-css-mode
-                            neotree
                             ob-elixir
                             ob-http
                             ob-restclient
@@ -43,5 +42,8 @@
                             smart-mode-line
                             smex
                             toml-mode
+                            treemacs
+                            treemacs-magit
+                            treemacs-projectile
                             wgrep
                             yasnippet))
