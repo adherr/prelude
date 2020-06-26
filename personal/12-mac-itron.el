@@ -27,4 +27,6 @@
       (let ((story-number (match-string 1)))
         (goto-char current-position)
         (insert "https://dev.azure.com/itron/SoftwareProducts/_workitems/edit/" story-number))))
+
+  (setq confirm-kill-emacs 'y-or-n-p)
   )
