@@ -11,3 +11,6 @@
 
 ;; wrap results from bottom to top
 (setq ivy-wrap 't)
+
+;; save all files in a wgrep (from counsel-projectile-rg, C-c C-o, C-x C-q)
+(setq wgrep-auto-save-buffer t)
