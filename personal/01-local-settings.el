@@ -58,7 +58,8 @@
                          avy-goto-word-or-subword-1
                          counsel-projectile-find-file
                          counsel-projectile-ag
-                         counsel-projectile-rg))
+                         counsel-projectile-rg
+                         ivy-resume))
 (dolist (action new-save-actions)
   (add-to-list 'super-save-triggers action))
 
