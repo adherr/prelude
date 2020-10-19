@@ -16,6 +16,7 @@
                             ess-smart-equals
                             feature-mode
                             flycheck-plantuml
+                            forge
                             git-link
                             ggtags
                             groovy-mode

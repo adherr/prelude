@@ -31,3 +31,5 @@ transient/
 /smex-items
 /transient/
 /plantuml.jar
+/forge-database.sqlite
+/.cache/
