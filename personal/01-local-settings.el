@@ -63,5 +63,9 @@
 (dolist (action new-save-actions)
   (add-to-list 'super-save-triggers action))
 
+;; prelude removed beacon mode, not sure how much I'll miss it
+(require 'beacon)
+(beacon-mode +1)
+
 (provide '01-local-settings)
 ;;; 01-local-settings ends here
